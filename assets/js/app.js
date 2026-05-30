@@ -2,6 +2,16 @@ function shortenURL() {
     const longURL = document.getElementById("long-url").value.trim();
     const alias = document.getElementById("alias").value.trim();
 
+const toggle=document.getElementById("theme-toggle");
+toggle.onclick=()=>{
+    document.body.classList.toggle("dark");
+    localStorage.setItem("theme",document.body.classList.contains("dark")?"dark":"light");
+};
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+}
+
+
     if (!longURL) {
         alert("Please enter a valid URL");
         return;
@@ -97,3 +107,4 @@ function printQR() {
     printWindow.focus();
     printWindow.print();
 }
+
