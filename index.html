@@ -1,1 +1,70 @@
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkShort — Shorten URLs & Generate QR Codes</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">LinkShort</div>
+        <ul>
+            <li><a href="#">Tool</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Docs</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Shorten URLs. Generate QR Codes. Monetize Traffic.</h1>
+        <p>A modern, fast, and monetizable link platform with built‑in QR generation and AdSense‑ready layout.</p>
+    </section>
+
+    <!-- TOOL SECTION -->
+    <section class="tool-wrapper">
+
+        <!-- TOP AD -->
+        <div class="ad-slot ad-top">Top Banner Ad</div>
+
+        <div class="tool-content">
+
+            <!-- SIDEBAR AD -->
+            <aside class="ad-slot ad-side">Sidebar Ad</aside>
+
+            <!-- MAIN TOOL -->
+            <div class="tool-box">
+
+                <h2 class="tool-title">Shorten URL & Generate QR Code</h2>
+
+                <input id="long-url" class="input" placeholder="Enter long URL">
+                <input id="alias" class="input" placeholder="Custom alias (optional)">
+                <button class="btn-primary" onclick="shortenURL()">Shorten URL</button>
+
+                <!-- INLINE AD -->
+                <div class="ad-slot ad-inline">Inline Ad</div>
+
+                <div id="result" class="result-box"></div>
+
+                <div id="qr-code" class="qr-box"></div>
+
+                <!-- FOOTER AD -->
+                <div class="ad-slot ad-footer">Footer Ad</div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 LinkShort — All rights reserved.
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>

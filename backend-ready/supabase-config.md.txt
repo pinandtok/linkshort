@@ -1,0 +1,9 @@
+# Supabase Setup
+
+1. Create a new Supabase project.
+2. Go to SQL Editor → Run the schema.sql file.
+3. Create an API key.
+4. Add environment variables to Vercel:
+   - SUPABASE_URL
+   - SUPABASE_KEY
+5. Deploy redirect function to /api/[alias].js

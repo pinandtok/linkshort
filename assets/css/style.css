@@ -1,1 +1,178 @@
-style.css
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: #0d0f14;
+    color: #ffffff;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(13, 15, 20, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #cfd3dc;
+    font-size: 0.95rem;
+}
+
+/* HERO */
+.hero {
+    padding: 180px 8% 120px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    background: linear-gradient(90deg, #4cc9f0, #4361ee, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #b8bcc7;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* TOOL WRAPPER */
+.tool-wrapper {
+    padding: 80px 8%;
+}
+
+.tool-content {
+    display: flex;
+    gap: 40px;
+}
+
+/* AD SLOTS */
+.ad-slot {
+    background: #1a1d25;
+    border: 1px dashed #2a2f3a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: #6c7280;
+    font-size: 0.9rem;
+}
+
+.ad-top {
+    margin-bottom: 40px;
+    height: 90px;
+}
+
+.ad-inline {
+    margin: 30px 0;
+    height: 250px;
+}
+
+.ad-footer {
+    margin-top: 40px;
+    height: 120px;
+}
+
+.ad-side {
+    width: 300px;
+    height: 600px;
+    position: sticky;
+    top: 120px;
+}
+
+@media (max-width: 900px) {
+    .ad-side {
+        display: none;
+    }
+}
+
+/* TOOL BOX */
+.tool-box {
+    flex: 1;
+    background: #151820;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #1f232e;
+}
+
+.tool-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #4cc9f0, #4361ee, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* INPUTS */
+.input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #2a2f3a;
+    background: #0f1117;
+    color: #fff;
+}
+
+/* BUTTONS */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background: #4361ee;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #4361ee;
+    border-radius: 8px;
+    color: #4361ee;
+    cursor: pointer;
+}
+
+/* RESULT + QR */
+.result-box {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.qr-box {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 60px 0;
+    color: #7c808a;
+    font-size: 0.9rem;
+}
