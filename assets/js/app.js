@@ -7,7 +7,6 @@ function shortenURL() {
         return;
     }
 
-    // Validate URL
     let urlObj;
     try {
         urlObj = new URL(longURL);
@@ -16,7 +15,6 @@ function shortenURL() {
         return;
     }
 
-    // Random English word list
     const words = [
         "sunrise", "meadow", "river", "forest", "crystal", "silver",
         "ember", "horizon", "breeze", "harbor", "willow", "canyon",
@@ -25,13 +23,11 @@ function shortenURL() {
 
     const randomWord = words[Math.floor(Math.random() * words.length)];
 
-    // Build new shortened domain
     let shortURL = `https://${randomWord}.com`;
     if (alias) {
         shortURL += `/${alias}`;
     }
 
-    // Display results
     document.getElementById("result").innerHTML = `
         <p><strong>Original URL:</strong><br>${longURL}</p>
         <p><strong>Short URL:</strong><br>
@@ -42,11 +38,9 @@ function shortenURL() {
         <button class="btn-secondary" onclick="printURL('${shortURL}')">Print URL</button>
     `;
 
-    // Generate QR code
     document.getElementById("qr-code").innerHTML = "";
     new QRCode(document.getElementById("qr-code"), shortURL);
 
-    // Add QR download + print buttons
     setTimeout(() => {
         const qrCanvas = document.querySelector("#qr-code canvas");
         if (qrCanvas) {
@@ -58,18 +52,15 @@ function shortenURL() {
         }
     }, 300);
 
-    // Clear input fields
     document.getElementById("long-url").value = "";
     document.getElementById("alias").value = "";
 }
 
-/* COPY */
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text);
     alert("Copied!");
 }
 
-/* DOWNLOAD URL AS TEXT FILE */
 function downloadURL(shortURL) {
     const blob = new Blob([shortURL], { type: "text/plain" });
     const link = document.createElement("a");
@@ -78,7 +69,6 @@ function downloadURL(shortURL) {
     link.click();
 }
 
-/* PRINT URL */
 function printURL(shortURL) {
     const printWindow = window.open("", "_blank");
     printWindow.document.write(`<h2>Short URL</h2><p>${shortURL}</p>`);
@@ -87,7 +77,6 @@ function printURL(shortURL) {
     printWindow.print();
 }
 
-/* DOWNLOAD QR CODE AS PNG */
 function downloadQR() {
     const canvas = document.querySelector("#qr-code canvas");
     if (!canvas) return;
@@ -97,7 +86,6 @@ function downloadQR() {
     link.click();
 }
 
-/* PRINT QR CODE */
 function printQR() {
     const canvas = document.querySelector("#qr-code canvas");
     if (!canvas) return;

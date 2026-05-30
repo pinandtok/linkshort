@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LinkShort — Shorten URLs & Generate QR Codes</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShort — Free URL Shortener & QR Generator</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
@@ -13,58 +14,132 @@
     <nav>
         <div class="logo">LinkShort</div>
         <ul>
-            <li><a href="#">Tool</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Docs</a></li>
+            <li><a href="#tool">Tool</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#policy">Policy</a></li>
         </ul>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
-        <h1>Shorten URLs. Generate QR Codes. Monetize Traffic.</h1>
-        <p>A modern, fast, and monetizable link platform with built‑in QR generation and AdSense‑ready layout.</p>
+        <h1>Shorten URLs & Generate QR Codes Instantly</h1>
+        <p>A clean, fast, and professional tool for creating short links and downloadable QR codes.</p>
     </section>
 
+    <!-- TOP AD -->
+    <div class="ad-slot ad-top">
+        <img src="assets/img/ad-top-placeholder.jpg" class="ad-img">
+    </div>
+
     <!-- TOOL SECTION -->
-    <section class="tool-wrapper">
-
-        <!-- TOP AD -->
-        <div class="ad-slot ad-top">Top Banner Ad</div>
-
+    <section id="tool" class="tool-wrapper">
         <div class="tool-content">
 
-            <!-- SIDEBAR AD -->
-            <aside class="ad-slot ad-side">Sidebar Ad</aside>
-
-            <!-- MAIN TOOL -->
             <div class="tool-box">
+                <h2 class="tool-title">URL Shortener</h2>
 
-                <h2 class="tool-title">Shorten URL & Generate QR Code</h2>
+                <label class="label">Enter Long URL</label>
+                <input type="text" id="long-url" class="input" placeholder="https://example.com">
 
-                <input id="long-url" class="input" placeholder="Enter long URL">
-                <input id="alias" class="input" placeholder="Custom alias (optional)">
+                <label class="label">Custom Alias (optional)</label>
+                <input type="text" id="alias" class="input" placeholder="my-link">
+
                 <button class="btn-primary" onclick="shortenURL()">Shorten URL</button>
 
-                <!-- INLINE AD -->
-                <div class="ad-slot ad-inline">Inline Ad</div>
-
                 <div id="result" class="result-box"></div>
-
                 <div id="qr-code" class="qr-box"></div>
-
-                <!-- FOOTER AD -->
-                <div class="ad-slot ad-footer">Footer Ad</div>
-
             </div>
+
+            <!-- SIDE AD -->
+            <div class="ad-slot ad-side">
+                <img src="assets/img/ad-side-placeholder.jpg" class="ad-img">
+            </div>
+
         </div>
     </section>
 
-    <footer>
-        © 2026 LinkShort — All rights reserved.
+    <!-- SEO SUMMARY -->
+    <section class="seo-summary">
+        <h2>Free URL Shortener & QR Code Generator</h2>
+        <p>LinkShort is a fast, reliable, and secure tool for creating short URLs and generating QR codes. Designed for professionals, businesses, and creators.</p>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2>Platform Capabilities</h2>
+        <ul>
+            <li>Shorten long URLs into clean, professional links.</li>
+            <li>Create custom aliases for branded link sharing.</li>
+            <li>Generate downloadable and printable QR codes.</li>
+            <li>Lightweight, fast, and optimized for all devices.</li>
+            <li>No account required — instant access.</li>
+        </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is LinkShort free?</h3>
+        <p>Yes. All core features are free.</p>
+
+        <h3>Do you store URLs?</h3>
+        <p>No. URLs are processed locally and not saved.</p>
+
+        <h3>Can I download QR codes?</h3>
+        <p>Yes. QR codes can be downloaded or printed.</p>
+    </section>
+
+    <!-- POLICY -->
+    <section id="policy" class="policy">
+        <h2>Privacy Policy</h2>
+        <p>LinkShort does not collect personal information or store URLs entered into the tool. Third‑party advertising partners may use cookies for personalization.</p>
+    </section>
+
+    <!-- TERMS -->
+    <section class="terms">
+        <h2>Terms of Service</h2>
+        <p>By using LinkShort, you agree not to shorten or distribute harmful, illegal, or malicious content. LinkShort is provided “as‑is” without warranties.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-info">
+
+        <div class="footer-section">
+            <h3>About LinkShort</h3>
+            <p>LinkShort is a fast, secure, and modern tool for shortening URLs and generating QR codes.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#tool">URL Shortener</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#policy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>FAQ</h3>
+            <p><strong>Is LinkShort free?</strong> Yes.</p>
+            <p><strong>Do you store URLs?</strong> No.</p>
+            <p><strong>Can I download QR codes?</strong> Yes.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Policies</h3>
+            <p><strong>Privacy:</strong> No personal data collected.</p>
+            <p><strong>Usage:</strong> No harmful content allowed.</p>
+            <p><strong>Liability:</strong> Provided “as‑is”.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 LinkShort — Free URL Shortener & QR Code Generator</p>
+        </div>
+
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="assets/js/app.js"></script>
-
 </body>
 </html>
