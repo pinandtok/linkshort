@@ -1,0 +1,18 @@
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: Inter, sans-serif; font-size: 24px; font-weight: 700; fill: black; }
+    .icon { stroke: black; stroke-width: 2; fill: none; }
+  </style>
+
+  <!-- Link Icon -->
+  <path class="icon" d="M18 12 L26 20 M26 12 L18 20" />
+
+  <!-- QR Icon -->
+  <rect class="icon" x="34" y="10" width="12" height="12" />
+  <rect class="icon" x="36" y="12" width="4" height="4" />
+  <rect class="icon" x="42" y="12" width="2" height="2" />
+  <rect class="icon" x="36" y="18" width="2" height="2" />
+
+  <!-- Text -->
+  <text x="60" y="26" class="text">LinkShort</text>
+</svg>
